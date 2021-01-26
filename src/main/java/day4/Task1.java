@@ -31,7 +31,7 @@ public class Task1 {
             if (element % 2 == 0) {
                 countEven++;
             }
-            if (element % 2 != 0) {
+            else if (element % 2 != 0) {
                 countOdd++;
             }
             countSumNumbers += element;
