@@ -3,7 +3,7 @@ package day6;
 class Task1 {
     public static void main(String[] args) {
         Car skoda = new Car();
-        skoda.setYear(2020);
+        skoda.setYear(2015);
         skoda.setColor("White ");
         skoda.setModel("Octavia ");
         skoda.info();
@@ -11,8 +11,6 @@ class Task1 {
                 + "\nГод выпуска: " + skoda.getYearOfIssue()
                 + "\nЦвет: " + skoda.getColor()
                 + "\nМодель: " + skoda.getModel());
-        int year = skoda.yearDifference(2015);
-        System.out.println(year);
 
         System.out.println();
 
@@ -22,5 +20,10 @@ class Task1 {
                 + "\nГод выпуска: " + kawasaki.getYearOfIssue()
                 + "\nЦвет: " + kawasaki.getColor()
                 + "\nМодель: " + kawasaki.getModel());
+
+        int year = skoda.yearDifference(2019);
+        System.out.println(year);
+        System.out.println(kawasaki.yearDifference(2020));;
+
     }
 }

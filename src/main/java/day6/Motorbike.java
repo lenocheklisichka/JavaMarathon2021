@@ -26,4 +26,8 @@ public class Motorbike {
     void info() {
         System.out.println("Это мотоцикл");
     }
+
+    public int yearDifference(int inputYear) {
+        return Math.abs(yearOfIssue - inputYear);
+    }
 }
