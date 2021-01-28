@@ -57,6 +57,6 @@ public class Airplane {
     }
 
     public void fillUp(int n) {
-        this.fuel = n + getFuel();
+        this.fuel = n + fuel;
     }
 }
