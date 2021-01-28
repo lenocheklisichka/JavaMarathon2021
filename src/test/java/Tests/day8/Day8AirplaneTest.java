@@ -1,5 +1,5 @@
-//package Tests.day8;
-//
+package Tests.day8;
+
 //import Tests.AbstractTest;
 //import day8.Airplane;
 //import org.junit.jupiter.api.Test;
