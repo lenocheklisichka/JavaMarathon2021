@@ -9,14 +9,20 @@ public class Task1 {
         Picker picker2 = new Picker(warehouse2);
         Courier courier2 = new Courier(warehouse2);
 
-        businessProcess(picker);
+        System.out.println("/-----------------Сотрудники с бонусом------------------------/");
+        businessProcess(picker2);
+        System.out.println(picker2);
+        businessProcess(courier2);
+        System.out.println(courier2);
+
+        System.out.println("/=================Сотрудники без бонуса=========================/");
+        picker.doWork();
+        picker.bonus();
         System.out.println(picker);
-
-        businessProcess(courier);
+        courier.doWork();
+        courier.bonus();
         System.out.println(courier);
-
-        picker2.doWork();
-        courier2.doWork();
+        System.out.println("/===================================================================/");
     }
 
     public static void businessProcess(Worker worker) {
@@ -24,19 +30,5 @@ public class Task1 {
             worker.doWork();
         }
         worker.bonus();
-    }
-
-    public static void businessProcess(Picker picker) {
-        for (int i = 0; i <= 9998; i++) {
-            picker.doWork();
-        }
-        picker.bonus();
-    }
-
-    public static void businessProcess(Courier courier) {
-        for (int i = 0; i <= 9999; i++) {
-            courier.doWork();
-        }
-        courier.bonus();
     }
 }

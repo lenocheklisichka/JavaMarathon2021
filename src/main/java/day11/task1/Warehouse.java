@@ -1,8 +1,8 @@
 package day11.task1;
 
 public class Warehouse {
-    public int countDeliveredOrders;
-    public int countPickerOrders;
+    private int countDeliveredOrders;
+    private int countPickerOrders;
 
     public int getCountPickedOrders(){
         return countPickerOrders;
@@ -10,5 +10,21 @@ public class Warehouse {
 
     public int getCountDeliveredOrders() {
         return countDeliveredOrders;
+    }
+
+    public void setCountDeliveredOrders(int countDeliveredOrders) {
+        this.countDeliveredOrders = countDeliveredOrders;
+    }
+
+    public void setCountPickerOrders(int countPickerOrders) {
+        this.countPickerOrders = countPickerOrders;
+    }
+
+    @Override
+    public String toString() {
+        return "Warehouse{" +
+                "countDeliveredOrders=" + countDeliveredOrders +
+                ", countPickerOrders=" + countPickerOrders +
+                '}';
     }
 }

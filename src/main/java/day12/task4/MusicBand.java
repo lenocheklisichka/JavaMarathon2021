@@ -38,9 +38,11 @@ public class MusicBand {
     }
 
     public static void transferMembers(MusicBand A, MusicBand B) {
-        for (String member : B.getMembers()) {
-            A.getMembers().add(member);
-        }
+//        for (String member : B.getMembers()) {
+//            A.getMembers().add(member);
+//        }
+        B.getMembers().addAll(A.getMembers());
+        A.getMembers().clear();
     }
 
     public void printMembers() {

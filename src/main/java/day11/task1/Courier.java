@@ -4,14 +4,9 @@ public class Courier implements Worker {
     private int salary;
     private boolean isPayed;
     private final Warehouse warehouse;
-    private int countDeliveredOrders;
 
     public int getSalary() {
         return salary;
-    }
-
-    public int getCountDeliveredOrders() {
-        return countDeliveredOrders;
     }
 
     public Courier(Warehouse warehouse) {
@@ -21,17 +16,21 @@ public class Courier implements Worker {
     @Override
     public void doWork() {
         salary += 100;
-        warehouse.countDeliveredOrders++;
+        warehouse.setCountDeliveredOrders(warehouse.getCountDeliveredOrders() + 1);
     }
 
     @Override
     public void bonus() {
-        if (warehouse.getCountDeliveredOrders() <= 10000) {
+        if (warehouse.getCountDeliveredOrders() < 10000) {
             System.out.println("Бонус пока не доступен");
-        } else if (isPayed) {
+        } else if (warehouse.getCountDeliveredOrders() == 10000) {
+            salary += 50000;
+            isPayed = true;
+        }
+
+        if (isPayed) {
             System.out.println("Бонус уже был выплачен");
         }
-        salary += 50000;
     }
 
     public String toString() {
