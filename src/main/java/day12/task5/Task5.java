@@ -26,6 +26,5 @@ public class Task5 {
         MusicBand.transferMembers(band1, band2);
         band1.printMembers();
         band2.printMembers();
-
     }
 }
