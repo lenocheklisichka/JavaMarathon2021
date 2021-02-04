@@ -1,0 +1,5 @@
+Anna 14
+Petr 34
+Ludmila 40
+Aleksey 35
+Evgeniy 19
